@@ -4,7 +4,7 @@ export default function BinList() {
   const [bins, setBins] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/bins")
+    fetch(`${import.meta.env.VITE_API_BASE}/api/bins`)
       .then(res => res.json())
       .then(data => setBins(data))
       .catch(err => console.error("Failed to fetch bins:", err));

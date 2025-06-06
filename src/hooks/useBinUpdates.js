@@ -9,7 +9,7 @@ export default function useBinUpdates(onUpdate) {
     if (connectedRef.current) return;
 
     const client = new Client({
-      brokerURL: "ws://localhost:8080/ws",
+      brokerURL: `${import.meta.env.VITE_API_BASE.replace(/^http/, "ws")}/ws`,
       reconnectDelay: 5000,
       debug: (str) => console.log("[STOMP DEBUG]", str),
       onConnect: () => {

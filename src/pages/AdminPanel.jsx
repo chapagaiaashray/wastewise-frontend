@@ -4,10 +4,11 @@ export default function AdminPanel() {
   const [bins, setBins] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [edited, setEdited] = useState({});
+  const API_BASE = import.meta.env.VITE_API_BASE;
 
   // Fetch bins from backend
   useEffect(() => {
-    fetch("http://localhost:8080/api/bins")
+    fetch(`${API_BASE}/api/bins`)
       .then((res) => res.json())
       .then((data) => setBins(data));
   }, []);
@@ -23,16 +24,16 @@ export default function AdminPanel() {
   };
 
   const handleSave = async () => {
-    const response = await fetch(`http://localhost:8080/api/bins/${edited.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...edited,
-        fillLevel: parseFloat(edited.fillLevel),
-      }),
-    });
+  const response = await fetch(`${API_BASE}/api/bins/${edited.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ...edited,
+      fillLevel: parseFloat(edited.fillLevel),
+    }),
+  });
 
     if (response.ok) {
       const updated = [...bins];
