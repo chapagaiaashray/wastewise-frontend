@@ -8,7 +8,7 @@ export default function useBins() {
   useEffect(() => {
     async function fetchBins() {
       try {
-        const res = await fetch("http://localhost:8080/api/bins");
+        const res = await fetch("https://wastewise-backend-uf1h.onrender.com/api/bins");
         if (!res.ok) throw new Error("Failed to fetch bins");
         const data = await res.json();
         setBins(data);
