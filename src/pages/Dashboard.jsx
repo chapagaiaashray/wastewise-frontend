@@ -46,8 +46,43 @@ export default function Dashboard() {
       : b.fillLevel - a.fillLevel
   );
 
-  if (loading) return <p className="text-white p-4">Loading bins...</p>;
-  if (error) return <p className="text-red-500 p-4">Failed to load bins 😓</p>;
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="text-center">
+          <svg
+            className="animate-spin h-10 w-10 text-blue-500 mx-auto mb-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 000 16v-4l-3 3 3 3v-4a8 8 0 01-8-8z"
+            ></path>
+          </svg>
+          <p className="text-white text-lg">Loading Smart Bins...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-red-400 text-lg">⚠️ Failed to load bins. Please try again.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6">
@@ -131,10 +166,12 @@ export default function Dashboard() {
                     />
                   </div>
                   <div>
-                    <h2 className="text-xl font-semibold">{bin.locationName}</h2>
-                    <p>Type: {bin.type}</p>
-                    <p>Status: {icon} {status}</p>
-                    <p>Coords: ({bin.latitude}, {bin.longitude})</p>
+                    <h2 className="text-xl font-semibold text-white">{bin.locationName}</h2>
+                    <p className="text-gray-300">Type: {bin.type}</p>
+                    <p className="text-gray-300">Status: {icon} {status}</p>
+                    <p className="text-gray-400 text-sm">
+                      Coords: ({bin.latitude}, {bin.longitude})
+                    </p>
                   </div>
                 </div>
               </div>
