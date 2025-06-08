@@ -1,12 +1,31 @@
-# React + Vite
+# WasteWise Frontend ♻️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend of **WasteWise**, a real-time smart bin monitoring system built using **React**, **TailwindCSS**, and **Vite**.
 
-Currently, two official plugins are available:
+> 🌐 Live Frontend is available at [https://wastewise-sewanee.netlify.app](https://wastewise-sewanee.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🖥️ Backend API: [https://wastewise-backend.onrender.com/api/bins](https://wastewise-backend.onrender.com/api/bins)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- Real-time bin updates via WebSocket (STOMP over SockJS)
+- Dynamic dashboard with sort, filter, and search
+- Heatmap and grid view toggle
+- Admin Panel to update bin details (with login)
+- Responsive design using TailwindCSS
+
+---
+
+## ⚙️ Technologies
+
+- React.js
+- TailwindCSS
+- Vite
+- STOMP.js + SockJS for WebSocket
+- CircularProgressBar for bin fill visuals
+- Hosted on Netlify
+
+---
+
