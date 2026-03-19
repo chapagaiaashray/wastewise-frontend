@@ -1,14 +1,14 @@
-# WasteWise Frontend ♻️
+# WasteWise Frontend 
 
 This is the frontend of **WasteWise**, a real-time smart bin monitoring system built using **React**, **TailwindCSS**, and **Vite**.
 
-> 🌐 Live Frontend is available at [https://wastewise-sewanee.netlify.app](https://wastewise-sewanee.netlify.app)
+>  Live Frontend is available at [https://wastewise-sewanee.netlify.app](https://wastewise-sewanee.netlify.app)
 
-> 🖥️ Backend API: [https://wastewise-backend.onrender.com/api/bins](https://wastewise-backend.onrender.com/api/bins)
+>  Backend API: [https://wastewise-backend.onrender.com/api/bins](https://wastewise-backend.onrender.com/api/bins)
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Real-time bin updates via WebSocket (STOMP over SockJS)
 - Dynamic dashboard with sort, filter, and search
@@ -18,7 +18,7 @@ This is the frontend of **WasteWise**, a real-time smart bin monitoring system b
 
 ---
 
-## ⚙️ Technologies
+##  Technologies
 
 - React.js
 - TailwindCSS
